@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Solution | Stylish Interior Design Experts</title>
+  <meta name="description" content="Interior Solution offers premium interior design services including home styling, office makeovers, 3D visualization, and furniture curation. Proudly based in Nigeria, serving clients across the globe.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="interior design, home decor, 3D interior visualization, Nigerian interior designers, global interior service, Interior Solution Nigeria">
+  <meta name="author" content="Interior Solution">
+  <link rel="icon" type="image/png" href="images/logo-placeholder.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <style>
+    html {
+      scroll-padding-top: 80px;
+      scroll-behavior: smooth;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #dcdcdc;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  animation: slideInDown 1s ease-out;
+}
+
+.logo img {
+  height: 120px;
+  object-fit: contain;
+  animation: pulse 2s infinite;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  color: #5c4033;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  animation: fadeIn 2s;
+}
+
+.nav a:hover {
+  color: #d4a373;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #5c4033;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #7f5539;
+}
+
+p, a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #090909;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  background: #d4a373;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.btn-primary:hover {
+  background: #bc8c5e;
+}
+
+.section {
+  padding: 4rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1740&q=80');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: slideIn 1s forwards;
+}
+
+.about-section {
+  background-image: url('https://images.unsplash.com/photo-1634746716720-f5a1eb1f3a60?auto=format&fit=crop&w=1740&q=80');
+}
+
+.services-section {
+  background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1740&q=80');
+}
+
+.portfolio-section {
+  background-color: #f5f5f5;
+}
+
+.testimonials-section {
+  background-image: url('https://images.unsplash.com/photo-1615873968403-4b2cc67ebdf7?auto=format&fit=crop&w=1740&q=80');
+}
+
+.contact-section {
+  background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1740&q=80');
+  text-align: center;
+}
+
+.services-grid, .portfolio-grid, .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.service-box, .testimonial {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  color: #333;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+.social-icons {
+  margin: 1.5rem 0;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.1);
+}
+
+footer {
+  background: #dcdcdc;
+  color: #5c4033;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: 800;
+}
+
+.cta-section {
+  background-color: #dcdcdc;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.cta-section h2, .cta-section p {
+  font-weight: 800;
+}
+
+.cta-section .btn-primary {
+  background: #fff;
+  color: #d4a373;
+  font-weight: 800;
+  border: 2px solid #d4a373;
+}
+
+.cta-section .btn-primary:hover {
+  background: #d4a373;
+  color: #fff;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p, a {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .portfolio-item img {
+    height: 200px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #5c4033;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="logo animate_animated animate_fadeInDown">
+      <img src="INTERIOR DESIGN LOGO.png" alt="Interior Solution Logo">
+    </div>
+    <nav class="nav animate_animated animate_fadeInDown animate_delay-1s">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="section hero-section animate_animated animate_fadeIn">
+    <div class="container">
+      <h1>Interior Solution</h1>
+      <p>We transform ordinary spaces into extraordinary experiences — blending style, comfort, and purpose.</p>
+      <a href="#contact" class="btn-primary">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <section class="section about-section" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Interior Solution is a globally-oriented interior design brand proudly based in Nigeria. We specialize in creative, elegant, and fully customized environments that reflect your unique vision and lifestyle. From cozy apartments to expansive villas and professional office spaces, we deliver thoughtful planning, functional layouts, mood boards, lighting concepts, and complete transformation services to clients locally and internationally.</p>
+    </div>
+  </section>
+
+  <section class="section services-section" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <h3>Home Interior</h3>
+          <p>Custom home designs tailored to your lifestyle and taste — warm, luxurious, and functional.</p>
+        </div>
+        <div class="service-box">
+          <h3>Office & Commercial</h3>
+          <p>Professional and modern environments to inspire productivity and leave lasting impressions.</p>
+        </div>
+        <div class="service-box">
+          <h3>3D Visualization</h3>
+          <p>Preview your dream space with photorealistic renders — see it before you build it.</p>
+        </div>
+        <div class="service-box">
+          <h3>Furniture & Decor</h3>
+          <p>Hand-picked pieces that elevate your space with style and elegance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+    <section class="section portfolio-section" id="portfolio">
+      <div class="container">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item animate_animated animate_zoomIn">
+            <img src="modern living room.jpg" alt="Living Room Design">
+          </div>
+          <div class="portfolio-item animate_animated animatezoomIn animate_delay-1s">
+            <img src="interior office.jpg" alt="Office Interior">
+          </div>
+          <div class="portfolio-item animate_animated animatezoomIn animate_delay-2s">
+            <img src="Modern Bedroom.jpg" alt="Modern Bedroom">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <h2>Client Reviews</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <p>"Interior Solution brought my dream home to life. Their taste is impeccable and the service was top-tier!"</p>
+            <h3>- Chiamaka O.</h3>
+          </div>
+          <div class="testimonial">
+            <p>"Working with their team was smooth and inspiring. My office now feels like a brand new space!"</p>
+            <h3>- Adewale K.</h3>
+          </div>
+          <div class="testimonial">
+            <p>"The 3D visualization helped me see exactly what I wanted. Execution was flawless."</p>
+            <h3>- Fatima B.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section contact-section animate_animated animate_fadeInUp" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Let's talk about your space! Reach out through any of our platforms:</p>
+        <div class="social-icons">
+          <a href="https://wa.me/2349024576816" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"></a>
+          <a href="https://instagram.com/interiorsolutionbyaboogie" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram"></a>
+          <a href="mailto:Horlarmzzy02@gmail.com"><img src="https://img.icons8.com/color/48/000000/gmail--v1.png" alt="Gmail"></a>
+        </div>
+        <a href="mailto:Horlarmzzy02@gmail.com" class="btn-primary">Send Us an Email</a>
+      </div>
+    </section>
+  
+    <footer>
+      &copy; 2025 Interior Solution. All rights reserved. Designed by AAO Tech Hub.
+    </footer>
+
+</body>
+</html>
